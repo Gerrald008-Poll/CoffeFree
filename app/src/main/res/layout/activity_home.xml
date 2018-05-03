@@ -13,8 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@drawable/bg_fragment"
-        tools:context="coffe.four_k_soft.com.coffeefree.HomeActivity">
+        android:background="@color/secondaryColor"
+        tools:context="coffe.four_k_soft.com.coffeefree.activity.HomeActivity">
 
         <include layout="@layout/toolbar_home"/>
 
@@ -38,22 +38,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/viewPagerHome"
-            app:tabIndicatorColor="@color/primaryDarkColor">
+            app:tabIndicatorColor="@color/secondaryLightColor"
+            android:background="@color/secondaryLightColor">
 
             <android.support.design.widget.TabItem
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Left" />
+                android:layout_height="wrap_content" />
 
             <android.support.design.widget.TabItem
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:icon="@drawable/ic_profile" />
+                android:layout_height="wrap_content" />
 
             <android.support.design.widget.TabItem
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/app_name"/>
+                android:layout_height="wrap_content" />
 
         </android.support.design.widget.TabLayout>
 

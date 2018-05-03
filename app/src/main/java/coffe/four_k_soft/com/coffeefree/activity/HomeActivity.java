@@ -1,11 +1,11 @@
-package coffe.four_k_soft.com.coffeefree;
+package coffe.four_k_soft.com.coffeefree.activity;
 
 
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -14,10 +14,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
+import coffe.four_k_soft.com.coffeefree.R;
 import coffe.four_k_soft.com.coffeefree.adapter.ViewPagerAdapter;
 import coffe.four_k_soft.com.coffeefree.databinding.ActivityHomeBinding;
 import coffe.four_k_soft.com.coffeefree.fragment.ListProductFragment;
 import coffe.four_k_soft.com.coffeefree.fragment.ShoppingCartFragment;
+import coffe.four_k_soft.com.coffeefree.fragment.UserProfileFragment;
 
 public class HomeActivity extends AppCompatActivity {
     private static final String TAG = HomeActivity.class.getSimpleName();
@@ -30,10 +32,9 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_home);
 
-        viewPager = findViewById(R.id.viewPagerHome);
+        viewPager = binding.viewPagerHome;
         setupViewPager(viewPager);
-
-        tabLayout = findViewById(R.id.tab_layout);
+        tabLayout = binding.tabLayout;
         tabLayout.setupWithViewPager(viewPager);
         setupTabIcons();
         setupToolBar();
@@ -49,6 +50,8 @@ public class HomeActivity extends AppCompatActivity {
                 switch (item.getItemId()){
                     case R.id.ic_setting:
                         Log.i(TAG, "check on setting icon");
+                        Intent intent = new Intent(getApplicationContext(), SettingActivity.class);
+                        startActivity(intent);
                 }
                 return false;
             }
@@ -57,15 +60,15 @@ public class HomeActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new ListProductFragment(),"ONE");
-        adapter.addFrag(new ShoppingCartFragment(), "TWO");
-        adapter.addFrag(new ListProductFragment(), "THREE");
+        adapter.addFrag(new UserProfileFragment(), "TWO");
+        adapter.addFrag(new ShoppingCartFragment(), "THREE");
         viewPager.setAdapter(adapter);
     }
     private void setupTabIcons(){
         int[] tabIcons = {
-                R.drawable.ic_all_setting,
-                R.drawable.ic_profile,
-                R.drawable.ic_shop_color
+                R.drawable.ic_selector_list,
+                R.drawable.ic_selector_profile,
+                R.drawable.ic_selector_shop
         };
 
         tabLayout.getTabAt(0).setIcon(tabIcons[0]);
@@ -77,7 +80,6 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.btn_setting_novigation, menu);
-
         return true;
     }
 }
