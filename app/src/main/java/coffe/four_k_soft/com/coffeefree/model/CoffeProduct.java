@@ -16,4 +16,9 @@ public class CoffeProduct {
         this.price = price;
         this.imgUrl = imgUrl;
     }
+
+
+    public String getTitleName() {return titleName;}
+    public String getPrice() {return price;}
+    public String getImgUrl() {return imgUrl;}
 }
