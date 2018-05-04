@@ -7,4 +7,5 @@ package coffe.four_k_soft.com.coffeefree.view_model;
 
 public class ViewModel {
 
+
 }

@@ -10,26 +10,57 @@
         tools:context="coffe.four_k_soft.com.coffeefree.fragment.FirstStartOneFragment">
 
         <!-- TODO: Update blank fragment layout -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="@string/hello_blank_fragment"
-            android:textAllCaps="true" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            tools:background="@drawable/bg_start_app">
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
                 android:layout_gravity="center"
                 android:layout_marginVertical="70dp"
-                android:contentDescription="@null"
-                android:background="@drawable/bg_circle_logo" />
+                android:background="@drawable/img_fake_logo"
+                android:backgroundTint="@color/primaryColorTransparency35"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hello!"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Let's get acquainted?"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                android:textColor="@color/primaryTextColor"/>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="60dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/bg_button"
+                android:text="Start"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="18sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </FrameLayout>

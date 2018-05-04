@@ -12,7 +12,9 @@
 
     <color name="secondaryColor">#d7ccc8</color>
     <color name="secondaryColorTransparency">#a2d7ccc8</color>
+    <color name="secondaryColorTransparency35">#32d7ccc8</color>
     <color name="secondaryLightColor">#fffffb</color>
     <color name="secondaryDarkColor">#a69b97</color>
     <color name="secondaryTextColor">#000000</color>
+    <color name="colorGreen">#43A047</color>
 </resources>

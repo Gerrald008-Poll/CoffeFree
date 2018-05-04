@@ -30,18 +30,15 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     protected void onFirstStart(){
-
-        Intent intent = new Intent(this, HomeActivity.class);
-        startActivity(intent);
-       // Log.i(TAG, "onFirstStart"+SaveFirstStart.getInstance().getUser());
-        /*if(null == SaveFirstStart.getInstance().getUser()){
-            Intent intent = new Intent(this, HomeActivity.class);
-            startActivity(intent);
-        }else {
+        //Log.i(TAG, "onFirstStart"+SaveFirstStart.getInstance().getUser());
+        //if(null == SaveFirstStart.getInstance().getUser()){
+            /*Intent intent = new Intent(this, HomeActivity.class);
+            startActivity(intent);*/
+        //}else {
             SaveFirstStart.from(getApplicationContext()).saveUser("1");
             getFragmentManager().beginTransaction()
                     .add(R.id.splash_container, new FirstStartOneFragment())
                     .commit();
-        }*/
+
     }
 }

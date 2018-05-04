@@ -9,15 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import coffe.four_k_soft.com.coffeefree.R;
-import coffe.four_k_soft.com.coffeefree.databinding.FragmentFirstStartOneBinding;
+import coffe.four_k_soft.com.coffeefree.databinding.FragmentFirstStartTwoBinding;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FirstStartOneFragment extends Fragment {
-    private FragmentFirstStartOneBinding binding;
+public class FirstStartTwoFragment extends Fragment {
+    private FragmentFirstStartTwoBinding binding;
 
-    public FirstStartOneFragment() {
+    public FirstStartTwoFragment() {
         // Required empty public constructor
     }
 
@@ -26,13 +26,8 @@ public class FirstStartOneFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_first_start_one, container, false);
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_first_start_two, container, false);
         View view = binding.getRoot();
-
-
-        binding.button.setOnClickListener(v -> getFragmentManager().beginTransaction()
-                .replace(R.id.splash_container, new FirstStartTwoFragment())
-                .commit());
 
         return view;
     }
