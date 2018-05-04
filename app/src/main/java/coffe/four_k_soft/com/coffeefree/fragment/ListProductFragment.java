@@ -26,7 +26,7 @@ import coffe.four_k_soft.com.coffeefree.model.FakeListCoffe;
  */
 public class ListProductFragment extends Fragment {
     private static final String TAG = ListProductFragment.class.getSimpleName();
-    //private FragmentListProductBinding binding;
+    private FragmentListProductBinding binding;
     private RecyclerView recyclerView;
     private List<CoffeProduct> mList;
 
@@ -44,9 +44,9 @@ public class ListProductFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_list_product, container, false);
-        /*binding = DataBindingUtil.inflate(inflater, R.layout.fragment_list_product, container, false);
-        View view = binding.getRoot();*/
+        //View view = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_list_product, container, false);
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_list_product, container, false);
+        View view = binding.getRoot();
 
         recyclerView = view.findViewById(R.id.recycler_table_shop);
         TableProductAdapter adapter = new TableProductAdapter(getActivity(), AddCard(mList));

@@ -5,4 +5,7 @@
     <string name="hello_blank_fragment_list">LIST PRODUCT</string>
     <string name="hello_blank_fragment_cart">SHOPPING CART</string>
     <string name="hello_blank_fragment_profile">USER PROFILE</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

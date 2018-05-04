@@ -360,7 +360,7 @@
                         android:textStyle="bold|italic" />
 
                     <Button
-                        android:id="@+id/button_card"
+                        android:id="@+id/button_history"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginHorizontal="5dp"
